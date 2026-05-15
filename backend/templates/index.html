@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Compiler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="dark-mode">
+    <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape-b" aria-hidden="true"></div>
+
+    <main class="container">
+        <header class="header">
+            <div>
+                <p class="eyebrow">Live Playground</p>
+                <h1>Online Compiler</h1>
+                <p class="subhead">Write, compile, and run code in 5 languages.</p>
+            </div>
+            <div class="header-actions">
+                <select id="language-select"></select>
+                <button id="theme-toggle" class="ghost-btn" type="button">Use Light</button>
+            </div>
+        </header>
+
+        <section class="workspace">
+            <div class="panel editor-panel">
+                <div class="panel-header">
+                    <h2>Source Code</h2>
+                    <span class="hint" id="lang-hint"></span>
+                </div>
+                <div id="editor-container"></div>
+            </div>
+
+            <div class="panel side-panel">
+                <div class="panel-header">
+                    <h2>Input</h2>
+                    <span class="hint">stdin</span>
+                </div>
+                <textarea id="input" placeholder="Type input for your program..." spellcheck="false"></textarea>
+
+                <div class="button-row">
+                    <button id="run-btn" type="button">Compile &amp; Run</button>
+                    <button id="save-btn" class="ghost-btn" type="button">Save</button>
+                </div>
+
+                <div class="panel-header output-head">
+                    <h2>Output</h2>
+                    <div class="output-actions">
+                        <button id="copy-output" class="ghost-btn" type="button">Copy</button>
+                        <button id="clear-output" class="ghost-btn" type="button">Clear</button>
+                    </div>
+                </div>
+                <pre id="output">Ready.</pre>
+
+                <div class="history-section">
+                    <div class="panel-header">
+                        <h2>Recent</h2>
+                    </div>
+                    <ul id="recent-list" class="history-list"></ul>
+
+                    <div class="panel-header">
+                        <h2>Saved</h2>
+                    </div>
+                    <ul id="saved-list" class="history-list"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>

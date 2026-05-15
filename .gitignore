@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+backend/data/
+backend/instance/
+.venv/
+.env
+*.env
+*.db
+*.out
+.vscode/
+node_modules/

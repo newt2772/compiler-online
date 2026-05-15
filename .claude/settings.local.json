@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo \"---exit: $?\")",
+      "Bash(xxd \"C:/Users/NishantRanjanKumar/Downloads/online-compiler/online-compiler-demo/backend/database.py\")"
+    ]
+  }
+}
